@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class enemigo : MonoBehaviour {
 
@@ -31,6 +32,7 @@ public class enemigo : MonoBehaviour {
 		if(vidas<=0)
 		{//Controlar el fin de partida
 			Debug.Log("Gola partida finalizada");
+			SceneManager.LoadScene("MenuLevel");
 		}
 		Destroy(gameObject);
 

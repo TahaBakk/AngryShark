@@ -34,7 +34,6 @@ public class player : MonoBehaviour {
 		}
 	}
 
-
 	void OnMouseDown ()
 	{
 		presionada = true;
@@ -60,11 +59,13 @@ public class player : MonoBehaviour {
 
 		if(proximoObjeto != null)
 		{
+			Object.Destroy(Jugador, 3.0f);
 			proximoObjeto.SetActive(true);
 		} else
 		{
-			enemigo.vidas = 0;
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+			//enemigo.vidas = 0;
+			//SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+			SceneManager.LoadScene("MenuPrincipal");
 		}
 	}
 }
